@@ -187,7 +187,7 @@ export function SimulatorPage() {
                   tickFormatter={(value) => `${value}%`}
                 />
                 <Tooltip
-                  formatter={(value: number) => [`${value}%`, 'Access']}
+                  formatter={(value: number | undefined) => [`${value}%`, 'Access']}
                   labelFormatter={(label) => `${label} community`}
                   contentStyle={{
                     fontSize: 12,

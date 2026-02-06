@@ -1,4 +1,4 @@
-import { FormEvent, useState } from 'react'
+import { type FormEvent, useState } from 'react'
 
 type Message = {
   id: number
@@ -170,7 +170,7 @@ export function ChatbotPage() {
 
     const conversationForApi = [...messages, userMessage].map(
       ({ id, ...rest }) => rest,
-    )
+    ) as Message[]
     const replyText = await fetchPolicyAnswer(conversationForApi)
 
     const assistantMessage: Message = {
@@ -246,16 +246,14 @@ export function ChatbotPage() {
           {messages.map((message) => (
             <div
               key={message.id}
-              className={`flex ${
-                message.role === 'user' ? 'justify-end' : 'justify-start'
-              }`}
+              className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'
+                }`}
             >
               <div
-                className={`max-w-[80%] rounded-2xl px-3 py-2 ${
-                  message.role === 'user'
+                className={`max-w-[80%] rounded-2xl px-3 py-2 ${message.role === 'user'
                     ? 'bg-blue-600 text-white'
                     : 'bg-slate-50 text-slate-800 border border-slate-200'
-                }`}
+                  }`}
               >
                 <p className="whitespace-pre-wrap text-sm">{message.text}</p>
               </div>
