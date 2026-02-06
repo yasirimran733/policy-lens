@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="48" fill="#E8F4F8" stroke="#4A90A4" stroke-width="2"/>
+  
+  <!-- Magnifying glass circle (lens) -->
+  <circle cx="40" cy="40" r="20" fill="none" stroke="#2E5F7F" stroke-width="3"/>
+  
+  <!-- Magnifying glass handle -->
+  <line x1="55" y1="55" x2="75" y2="75" stroke="#2E5F7F" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Policy document inside the lens -->
+  <rect x="32" y="28" width="16" height="20" fill="#4A90A4" opacity="0.7" rx="2"/>
+  <line x1="36" y1="32" x2="44" y2="32" stroke="#E8F4F8" stroke-width="1.5"/>
+  <line x1="36" y1="36" x2="44" y2="36" stroke="#E8F4F8" stroke-width="1.5"/>
+  <line x1="36" y1="40" x2="44" y2="40" stroke="#E8F4F8" stroke-width="1.5"/>
+</svg>
